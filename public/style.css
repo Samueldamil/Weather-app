@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather", serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.heading {
+    color: #f5f5f5;
+    font-size: 20px;
+}
+
+.input input {
+    border: 2px solid #2196f3;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    width: 250px;
+}
+
+.input::placeholder {
+    color: #A0A0A0;
+}
+
+.search-btn,
+.clear-btn {
+    background-color: #0d253f;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-btn:hover,
+.clear-btn:hover {
+  background-color: #ff4d4d;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+#weatherInfo {
+  display: none;
+}
+
+#cityName {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+#temperature,
+#humidity,
+#condition,
+#wind {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.fa-location-dot {
+  color: red;
+}
+
+.fa-temperature-half {
+  color: #ff6b6b;
+}
+
+.fa-cloud-sun {
+  color: #ffa502;
+}
+
+.fa-droplet {
+  color: #1dd1a1;
+}
+
+.fa-wind {
+  color: #00d2d3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  transform: translateX(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+
