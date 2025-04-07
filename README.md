@@ -18,3 +18,5 @@ A simple and interactive weather application built with **HTML**, **CSS**, and *
 - **CSS**: For styling the app, including animations.
 - **JavaScript**: For handling user input, fetching data from the OpenWeatherMap API, and managing the UI.
 - **FontAwesome**: For weather-related icons.
+
+You can check out the live demo [here](https://weather-app-50jl.onrender.com).
