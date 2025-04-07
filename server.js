@@ -19,7 +19,7 @@ app.get('/weather', async (req, res) => {
   const city = req.query.city;
 
   if (!city) {
-    return res.status(400).json({error: "City is requires."});
+    return res.status(400).json({error: "City is required."});
   }
   
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${apiKey}`;
